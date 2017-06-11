@@ -33,12 +33,12 @@ html(lang='en')
       })
       });
       $('#login').click(function () {
-      $.post('/eternity/admin', {
+      $.post('/admin', {
       'username': md5($('#username').val()),
       'password': md5($('#password').val())
       }, function (data) {
       if (data.success) {
-      window.location.href = "/eternity/admin/index";
+      window.location.href = "/admin/index";
       } else {
       alert("账号、密码错误，请重新输入!");
       }

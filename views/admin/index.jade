@@ -19,14 +19,14 @@ html(lang='en')
           #collapseTwo.panel-collapse.collapse
             #says.panel-body
         h2.config-h2 Add Item
-        form(method='post', action='/eternity/admin/love-record/upload', enctype='multipart/form-data')
+        form(method='post', action='/admin/love-record/upload', enctype='multipart/form-data')
           input#say.form-control.block-inline(type='text', name='say', placeholder='please input your sentence')
           input.form-control.block-inline(type='file', name='inputFile', value='upload img')
           input.btn.btn-success.block-inline(type='submit', value='upload')
     script(type='text/javascript', src='/javascripts/jquery-1.12.2.min.js')
     script(type='text/javascript', src='/javascripts/bootstrap.min.js')
     script(type='text/javascript').
-      $.get('/eternity/love-record/says', function (data) {
+      $.get('/love-record/says', function (data) {
       data.map(function (say) {
       if (say != '')
       $('#says').append('<p class="say">' + say + '</p>');

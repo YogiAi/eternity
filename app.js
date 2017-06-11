@@ -37,7 +37,7 @@ app.use(session({
 }));
 app.use(function (req, res, next) {
     if (!req.session.user && req.url.indexOf("admin/") > -1) {
-        res.redirect('/eternity/admin');
+        res.redirect('/admin');
     } else
         next();
 });
