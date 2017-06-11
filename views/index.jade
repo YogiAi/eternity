@@ -7,7 +7,7 @@ html(lang='zh')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='/stylesheets/love-record/main.css')
   body
-    audio(src='/media/hongdou.mp3', autoplay='true', loop='loop')
+    audio(src='/media/theme.mp3', autoplay='true', loop='loop')
     .modal.show(style='top:24%;')
       .modal-dialog(style='opacity: .9')
         .modal-content(style='opacity:.85')
@@ -36,15 +36,15 @@ html(lang='zh')
     script.
       $(function () {
       //设置起始日期
-      countTime('2016/01/30 23:45', 'day', 'hour', 'minute', 'second');
+      countTime('2017/04/08 20:22', 'day', 'hour', 'minute', 'second');
       var days = $('#day').text();
       // 设置标题
       if (parseInt(days / 365) != 0) {
-      $(document).attr("title", "在一起" + parseInt(days / 365) + "年,感谢相伴。");
+      $(document).attr("title", "相识了" + parseInt(days / 365) + "年,感谢相伴。");
       } else if (parseInt(days / 30) != 0) {
-      $(document).attr("title", "在一起" + parseInt(days / 30) + "个月,感谢相伴。");
+      $(document).attr("title", "相识了" + parseInt(days / 30) + "个月,感谢相伴。");
       } else {
-      $(document).attr("title", "在一起" + days + "天,感谢相伴。");
+      $(document).attr("title", "相识了" + days + "天,感谢相伴。");
       }
       $.get('/love-record/imgs', function (data) {
       $.backstretch(data, {
